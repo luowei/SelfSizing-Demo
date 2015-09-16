@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MyCollectionViewController.h"
+#import "ViewController.h"
+#import "MyTableViewController.h"
+#import "MyScrollViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +23,36 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    self.window.rootViewController = [MyCollectionViewController new];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+
+//    ViewController *viewController = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
+//    viewController.title = @"viewController";
+//    viewController.view.backgroundColor = [UIColor whiteColor];
+//    viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:10];
+
+    MyScrollViewController *viewController = [MyScrollViewController new];
+    viewController.title = @"ScrollView";
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:10];
+
+
+    MyTableViewController *tableViewController= [MyTableViewController new];
+    tableViewController.title = @"TableView";
+    tableViewController.view.backgroundColor = [UIColor grayColor];
+    tableViewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:12];
+
+    MyCollectionViewController *collectionViewController = [MyCollectionViewController new];
+    collectionViewController.title = @"CollectionView";
+    collectionViewController.view.backgroundColor = [UIColor lightGrayColor];
+    collectionViewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:11];
+
+    UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:viewController];
+    UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:collectionViewController];
+
+    tabBarController.viewControllers = @[navigationController1,navigationController2,navigationController3];
+
+    self.window.rootViewController = tabBarController;
 
     [self.window makeKeyAndVisible];
 

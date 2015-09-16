@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEF06017C3F74486DD698A7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0611DAD5C13A07EBD7412 /* ViewController.m */; };
 		BEF064164C872F1FD9E36E10 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF063B5335EF1C87014B92E /* MyCollectionViewController.m */; };
+		BEF064A74BEAE6FA5C3FC761 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0684B11E5E71A9B8FA139 /* NSArray+PureLayout.m */; };
+		BEF0655A51ADDEE8BF12294E /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06D4E29A942CBFD5BA3E7 /* MyTableViewController.m */; };
+		BEF0688BB7473D84D344C5A1 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0648EAFB09AD7E97B9F10 /* NSLayoutConstraint+PureLayout.m */; };
+		BEF06AE2A891206AB4CF239F /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06B8BE91CD66FBB8D6B79 /* ALView+PureLayout.m */; };
+		BEF06BD225C4819048059FEA /* MyScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06231ED0F6CBA19798BA0 /* MyScrollViewController.m */; };
 		EAB74B381B9C2F16003847A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB74B371B9C2F16003847A4 /* main.m */; };
 		EAB74B3B1B9C2F16003847A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB74B3A1B9C2F16003847A4 /* AppDelegate.m */; };
-		EAB74B3E1B9C2F16003847A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB74B3D1B9C2F16003847A4 /* ViewController.m */; };
 		EAB74B411B9C2F16003847A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB74B3F1B9C2F16003847A4 /* Main.storyboard */; };
 		EAB74B431B9C2F16003847A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB74B421B9C2F16003847A4 /* Images.xcassets */; };
 		EAB74B461B9C2F16003847A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB74B441B9C2F16003847A4 /* LaunchScreen.xib */; };
@@ -30,14 +35,27 @@
 
 /* Begin PBXFileReference section */
 		BEF060B686E9879433E1CAD2 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
+		BEF0611DAD5C13A07EBD7412 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BEF06231ED0F6CBA19798BA0 /* MyScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollViewController.m; sourceTree = "<group>"; };
+		BEF063B496D6CFF6CC0C9938 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
 		BEF063B5335EF1C87014B92E /* MyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
+		BEF063EAC43565B62DA28B24 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		BEF0642B5DB7E376CAC4A8B7 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		BEF0648EAFB09AD7E97B9F10 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		BEF064A2AA66FE600BD619B1 /* MyScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollViewController.h; sourceTree = "<group>"; };
+		BEF067796D346831E24B0FF4 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		BEF0679E213DAEC8BF92D902 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		BEF0684B11E5E71A9B8FA139 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		BEF06AEF84FBB2ABC1C2AA0C /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		BEF06B8BE91CD66FBB8D6B79 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		BEF06D4E29A942CBFD5BA3E7 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		BEF06EEA4BB6D6DD441A53E9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BEF06FD0C18AA5CD42CD8170 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		EAB74B321B9C2F16003847A4 /* SelfSizing-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SelfSizing-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB74B361B9C2F16003847A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAB74B371B9C2F16003847A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAB74B391B9C2F16003847A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EAB74B3A1B9C2F16003847A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EAB74B3C1B9C2F16003847A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EAB74B3D1B9C2F16003847A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EAB74B401B9C2F16003847A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAB74B421B9C2F16003847A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAB74B451B9C2F16003847A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -67,6 +85,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF061EBE41A7D1456A77210 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BEF06D4E29A942CBFD5BA3E7 /* MyTableViewController.m */,
+				BEF063EAC43565B62DA28B24 /* MyTableViewController.h */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		BEF0651BD63EF91A821A23CD /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				BEF06231ED0F6CBA19798BA0 /* MyScrollViewController.m */,
+				BEF064A2AA66FE600BD619B1 /* MyScrollViewController.h */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		BEF069FF7B16B336CBC8161D /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BEF067796D346831E24B0FF4 /* PureLayout.h */,
+				BEF06AEF84FBB2ABC1C2AA0C /* ALView+PureLayout.h */,
+				BEF06B8BE91CD66FBB8D6B79 /* ALView+PureLayout.m */,
+				BEF06FD0C18AA5CD42CD8170 /* PureLayoutDefines.h */,
+				BEF0642B5DB7E376CAC4A8B7 /* NSArray+PureLayout.h */,
+				BEF0684B11E5E71A9B8FA139 /* NSArray+PureLayout.m */,
+				BEF0679E213DAEC8BF92D902 /* PureLayout+Internal.h */,
+				BEF063B496D6CFF6CC0C9938 /* NSLayoutConstraint+PureLayout.h */,
+				BEF0648EAFB09AD7E97B9F10 /* NSLayoutConstraint+PureLayout.m */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
 		BEF06B2A2D862593B84A3581 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +137,7 @@
 				EAB74B341B9C2F16003847A4 /* SelfSizing-Demo */,
 				EAB74B4E1B9C2F16003847A4 /* SelfSizing-DemoTests */,
 				EAB74B331B9C2F16003847A4 /* Products */,
+				BEF069FF7B16B336CBC8161D /* PureLayout */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +156,14 @@
 				BEF06B2A2D862593B84A3581 /* CollectionView */,
 				EAB74B391B9C2F16003847A4 /* AppDelegate.h */,
 				EAB74B3A1B9C2F16003847A4 /* AppDelegate.m */,
-				EAB74B3C1B9C2F16003847A4 /* ViewController.h */,
-				EAB74B3D1B9C2F16003847A4 /* ViewController.m */,
+				BEF06EEA4BB6D6DD441A53E9 /* ViewController.h */,
+				BEF0611DAD5C13A07EBD7412 /* ViewController.m */,
 				EAB74B3F1B9C2F16003847A4 /* Main.storyboard */,
 				EAB74B421B9C2F16003847A4 /* Images.xcassets */,
 				EAB74B441B9C2F16003847A4 /* LaunchScreen.xib */,
 				EAB74B351B9C2F16003847A4 /* Supporting Files */,
+				BEF061EBE41A7D1456A77210 /* TableView */,
+				BEF0651BD63EF91A821A23CD /* ScrollView */,
 			);
 			path = "SelfSizing-Demo";
 			sourceTree = "<group>";
@@ -239,11 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAB74B3E1B9C2F16003847A4 /* ViewController.m in Sources */,
 				EAB74B5F1B9C3274003847A4 /* SelfSizingCell.m in Sources */,
 				EAB74B3B1B9C2F16003847A4 /* AppDelegate.m in Sources */,
 				EAB74B381B9C2F16003847A4 /* main.m in Sources */,
 				BEF064164C872F1FD9E36E10 /* MyCollectionViewController.m in Sources */,
+				BEF0655A51ADDEE8BF12294E /* MyTableViewController.m in Sources */,
+				BEF06AE2A891206AB4CF239F /* ALView+PureLayout.m in Sources */,
+				BEF064A74BEAE6FA5C3FC761 /* NSArray+PureLayout.m in Sources */,
+				BEF0688BB7473D84D344C5A1 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				BEF06BD225C4819048059FEA /* MyScrollViewController.m in Sources */,
+				BEF06017C3F74486DD698A7C /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

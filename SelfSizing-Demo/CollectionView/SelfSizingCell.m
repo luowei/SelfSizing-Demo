@@ -33,7 +33,7 @@
 //}
 
 
-//方法二:重写 preferredLayoutAttributesFittingAttributes
+//方法二:重写 preferredLayoutAttributesFittingAttributes (iOS9下会出现，死循环调用)
 - (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
     UICollectionViewLayoutAttributes *attributes = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
 
