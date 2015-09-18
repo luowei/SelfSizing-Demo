@@ -26,31 +26,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+//    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectInset(self.view.frame,0,40)];
+//    self.scrollView.backgroundColor = [UIColor lightGrayColor];
+//    [self.view addSubview:self.scrollView];
+//
+//    self.contentView = [[UIView alloc] initWithFrame:CGRectInset(self.scrollView.frame,100,200)];
+//    self.contentView.backgroundColor = [UIColor greenColor];
+//    [self.scrollView addSubview:self.contentView];
+//
+//    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,self.view.frame.size.width + 500);
 
     int pages = arc4random() % 10 + 10;
 
-    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    self.scrollView.pagingEnabled = YES;
+    self.scrollView = [UIScrollView newAutoLayoutView];
+//    self.scrollView.pagingEnabled = YES;
+//    self.scrollView.scrollEnabled = YES;
     [self.view addSubview:self.scrollView];
 
-    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView autoPinToTopLayoutGuideOfViewController:self withInset:0];
     [self.scrollView autoPinToBottomLayoutGuideOfViewController:self withInset:0];
+    [self.scrollView autoPinEdgeToSuperviewMargin:ALEdgeLeft];
+    [self.scrollView autoPinEdgeToSuperviewMargin:ALEdgeRight];
 
-
-    self.contentView = [[UIView alloc] initWithFrame:self.scrollView.frame];
+    self.contentView = [UIView newAutoLayoutView];
     [self.view addSubview:self.contentView];
 
-    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView autoPinEdgesToSuperviewMargins];
+    [self.contentView autoPinEdgeToSuperviewMargin:ALEdgeTop];
+    [self.contentView autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+//    [self.contentView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     self.contentWidthConstraint = [self.contentView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.scrollView withMultiplier:pages];
 
     [self setupPages:pages];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 
