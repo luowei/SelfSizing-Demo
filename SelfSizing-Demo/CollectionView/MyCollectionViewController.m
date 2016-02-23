@@ -64,10 +64,10 @@
 
 #pragma mark ------- UICollectionViewDelegateFlowLayout Implementation -------
 
-//定义每个UICollectionView cell的大小
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return CGSizeMake(fDeviceWidth, fDeviceHeight);
-    return CGSizeMake(self.collectionView.frame.size.width/4, self.collectionView.frame.size.height/8);
-}
+////定义每个UICollectionView cell的大小
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+////    return CGSizeMake(fDeviceWidth, fDeviceHeight);
+//    return CGSizeMake(self.collectionView.frame.size.width/4, self.collectionView.frame.size.height/8);
+//}
 
 @end

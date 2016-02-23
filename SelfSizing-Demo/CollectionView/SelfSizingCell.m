@@ -22,6 +22,7 @@
 }
 
 ////方法一:重写sizeThatFits
+//// (注意:在iOS9下如果同时重写 collectionView:layout:sizeForItemAtIndexPath 和以下这个方法,会出现死循环调用)
 //- (CGSize)sizeThatFits:(CGSize)size {
 //    CGRect textFrame = [_textLabel.text boundingRectWithSize:CGSizeMake(MAXFLOAT, _textLabel.frame.size.height)
 //                                                         options:NSStringDrawingUsesLineFragmentOrigin
@@ -33,15 +34,23 @@
 //}
 
 
-//方法二:重写 preferredLayoutAttributesFittingAttributes (iOS9下会出现，死循环调用)
+//方法二:重写 preferredLayoutAttributesFittingAttributes
+// (注意:在iOS9下如果同时重写 collectionView:layout:sizeForItemAtIndexPath 和以下这个方法,会出现死循环调用)
 - (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
     UICollectionViewLayoutAttributes *attributes = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
 
-    if (_textLabel){
-        CGRect textFrame = [_textLabel.text boundingRectWithSize:CGSizeMake(MAXFLOAT, _textLabel.frame.size.height)
-                                                         options:NSStringDrawingUsesLineFragmentOrigin
-                                                      attributes:@{NSFontAttributeName : _textLabel.font}
-                                                         context:nil];
+    if (_textLabel && _textLabel.font){
+        NSString *text = _textLabel.text;
+//        CGRect textFrame = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, _textLabel.frame.size.height)
+//                                                         options:NSStringDrawingUsesLineFragmentOrigin
+//                                                      attributes:@{NSFontAttributeName : _textLabel.font}
+//                                                         context:nil];
+
+        CGRect textFrame;
+        NSDictionary *attrs = @{NSFontAttributeName: _textLabel.font};
+
+        textFrame.size = [text sizeWithAttributes:attrs];
+
         attributes.frame = _textLabel.frame = textFrame;
     }
     return attributes;
